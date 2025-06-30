@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meenoe - Dashboard</title>
+    <meta name="description" content="Meenoe is a comprehensive SaaS platform for managing the full lifecycle of meetings and enabling asynchronous collaborative work.">
+    
+    <!-- Tabler icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/3.34.0/tabler-icons.min.css" integrity="sha512-MsO/oEO313SeWk87bUIzVZBnm8v7BK0/02G6e1YaJd6D1/yM7+rLASTnKpnbV8Qf9mrOxVN+o5REX2ix85FyJw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/assets/css/styles.css">
+</head>
+<body>
+    <!-- Page Wrapper -->
+    <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full" data-sidebar-position="fixed" data-header-position="fixed">
+        
+        <!-- Sidebar Start -->
+        <aside class="left-sidebar">
+            <div>
+                <!-- Brand Logo -->
+                <div class="brand-logo d-flex align-items-center justify-content-between">
+                    <a href="/" class="text-nowrap logo-img">
+                        <div class="d-flex align-items-center">
+                            <img src="/src/assets/dark-logo.svg" alt="Meenoe" style="height: 32px;" class="me-2">
+                        </div>
+                    </a>
+                    <div class="close-btn d-xl-none d-block sidebartoggler cursor-pointer">
+                        <i class="ti ti-menu-2"></i>
+                    </div>
+                </div>
+
+                <!-- User Profile Section -->
+                <div class="fixed-profile p-3 mx-4 mb-2 bg-secondary-subtle rounded mt-3 hide-menu">
+                    <div class="hstack gap-3">
+                        <div class="client-profile-img">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&dpr=1" 
+                                 class="rounded-circle" width="40" height="40" alt="profile">
+                        </div>
+                        <div class="john-title">
+                            <h6 class="mb-0 fs-4 fw-semibold" id="user-name">John Admin</h6>
+                            <span class="fs-2 text-muted">Professional</span>
+                        </div>
+                        <button class="border-0 bg-transparent text-primary ms-auto" id="logout-btn" title="Logout">
+                            <i class="ti ti-power" style="width: 16px; height: 16px;"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sidebar Navigation -->
+                <nav class="sidebar-nav scroll-sidebar">
+                    <ul id="sidebarnav">
+                        <!-- Home Section -->
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Home</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/" data-page="dashboard">
+                                <span><i class="ti ti-home" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">Dashboard</span>
+                            </a>
+                        </li>
+
+                        <!-- MEENOE Section -->
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">MEENOE</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/my-meenoes" data-page="my-meenoes">
+                                <span><i class="ti ti-file-text" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">My Meenoes</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/create-new" data-page="create-new">
+                                <span><i class="ti ti-plus" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">Create New</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/my-files" data-page="my-files">
+                                <span><i class="ti ti-folder-open" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">My Files</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/organization" data-page="organization">
+                                <span><i class="ti ti-building" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">Organization</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/notifications" data-page="notifications">
+                                <span><i class="ti ti-bell" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">Notifications</span>
+                            </a>
+                        </li>
+
+                        <!-- Extras Section -->
+                        <li class="nav-small-cap">
+                            <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+                            <span class="hide-menu">Extras</span>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/settings" data-page="settings">
+                                <span><i class="ti ti-settings" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">Settings</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="/support" data-page="support">
+                                <span><i class="ti ti-help" style="width: 20px; height: 20px;"></i></span>
+                                <span class="hide-menu">Help</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <!-- Sidebar End -->
+
+        <!-- Main Content Wrapper -->
+        <div class="body-wrapper">
+            <!-- Header Start -->
+            <header class="app-header">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <ul class="navbar-nav">
+                        <li class="nav-item d-block">
+                            <button class="nav-link sidebartoggler nav-icon-hover btn btn-link">
+                                <i class="ti ti-menu-2"></i>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link nav-icon-hover position-relative" href="/notifications">
+                                <i class="ti ti-bell" style="width: 20px; height: 20px;"></i>
+                                <div class="notification bg-primary rounded-circle"></div>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="nav-link nav-icon-hover btn btn-link" data-bs-toggle="dropdown">
+                                <i class="ti ti-grid-dots" style="width: 20px; height: 20px;"></i>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up">
+                                <div class="message-body">
+                                    <button class="d-flex align-items-center gap-2 dropdown-item">
+                                        <i class="ti ti-file-text" style="width: 16px; height: 16px;"></i>
+                                        <p class="mb-0 fs-3">Document View</p>
+                                    </button>
+                                    <button class="d-flex align-items-center gap-2 dropdown-item">
+                                        <i class="ti ti-list" style="width: 16px; height: 16px;"></i>
+                                        <p class="mb-0 fs-3">List View</p>
+                                    </button>
+                                    <button class="d-flex align-items-center gap-2 dropdown-item">
+                                        <i class="ti ti-columns" style="width: 16px; height: 16px;"></i>
+                                        <p class="mb-0 fs-3">Table View</p>
+                                    </button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="navbar-collapse justify-content-end px-0">
+                        <ul class="navbar-nav flex-row ms-auto align-items-center justify-content-end">
+                            <li class="nav-item dropdown">
+                                <button class="nav-link nav-icon-hover client-profile-img btn btn-link" data-bs-toggle="dropdown">
+                                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&dpr=1" 
+                                         alt="profile" width="35" height="35" class="rounded-circle">
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-end dropdown-menu-animate-up">
+                                    <div class="message-body">
+                                        <a href="/profile" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-user" style="width: 16px; height: 16px;"></i>
+                                            <p class="mb-0 fs-3">My Profile</p>
+                                        </a>
+                                        <a href="/settings" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-mail" style="width: 16px; height: 16px;"></i>
+                                            <p class="mb-0 fs-3">My Account</p>
+                                        </a>
+                                        <a href="/my-files" class="d-flex align-items-center gap-2 dropdown-item">
+                                            <i class="ti ti-check" style="width: 16px; height: 16px;"></i>
+                                            <p class="mb-0 fs-3">My Tasks</p>
+                                        </a>
+                                        <button class="btn btn-outline-primary mx-3 mt-2 d-block w-auto" id="header-logout-btn">
+                                            Logout
+                                        </button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- Header End -->
+
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="inner-container-fluid">
+                    <main id="main-content" class="flex-grow-1">
+                        <!-- Dynamic content will be loaded here -->
+                    </main>
+                    <noscript>Meenoe requires JavaScript to function correctly. Please enable JavaScript via your browser settings.</noscript>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/assets/js/bootstrap.js"></script>
+    <script type="module" src="/src/assets/js/simplebar.js"></script>
+    <script type="module" src="/src/assets/js/sidemenu.js"></script>
+    <script type="module" src="/src/assets/js/app.min.js"></script>
+    <script type="module" src="/src/js/auth.js"></script>
+    <script type="module" src="/src/js/router.js"></script>
+    <script type="module" src="/src/js/pages/dashboard.js"></script>
+    <script type="module" src="/src/js/pages/my-meenoes.js"></script>
+    <script type="module" src="/src/js/pages/create-new.js"></script>
+    <script type="module" src="/src/js/pages/my-files.js"></script>
+    <script type="module" src="/src/js/pages/organization.js"></script>
+    <script type="module" src="/src/js/pages/notifications.js"></script>
+    <script type="module" src="/src/js/pages/profile.js"></script>
+    <script type="module" src="/src/js/app.js"></script>
+
+    <!-- Quill.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/2.0.2/quill.min.js"></script>
+    <!-- Flatpickr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+
+
+<script type="module" src="/src/js/create-new/bootstrap-init.js"></script>
+<script type="module" src="/src/js/create-new/datepicker.js"></script>
+<script type="module" src="/src/js/create-new/Sortable.min.js"></script>
+<script type="module" src="/src/js/create-new/utils.js"></script>
+<script type="module" src="/src/js/create-new/waveform-audio-player.js"></script>
+</body>
+</html>

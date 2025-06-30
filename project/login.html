@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meenoe - Login</title>
+    <meta name="description" content="Sign in to your Meenoe account">
+    
+    <!-- Custom Bootstrap CSS -->
+    <link rel="stylesheet" href="/src/assets/css/bootstrap.css">
+    <!-- Tabler icons -->
+    <link rel="stylesheet" href="/src/assets/css/tabler.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="/src/assets/css/styles.css">
+</head>
+<body>
+    <div class="auth-container d-flex align-items-center justify-content-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card auth-card border-0 rounded-4 shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <div class="d-flex justify-content-center align-items-center mb-3">
+                                    <img src="/src/assets/dark-logo.svg" alt="Meenoe" style="height: 40px;">
+                                </div>
+                                <h1 class="h4 mb-1">Welcome back</h1>
+                                <p class="text-muted">Sign in to your account to continue</p>
+                            </div>
+
+                            <div id="error-message" class="alert alert-danger d-none">
+                                <i class="ti ti-alert-circle" style="width: 20px; height: 20px;" class="me-2"></i>
+                                <span id="error-text"></span>
+                            </div>
+
+                            <form id="login-form">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="Enter your email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">Password</label>
+                                    <div class="position-relative">
+                                        <input type="password" class="form-control form-control-lg" id="password" placeholder="Enter your password" required>
+                                        <button type="button" class="btn btn-link position-absolute end-0 top-50 translate-middle-y" id="toggle-password">
+                                            <i class="ti ti-eye" style="width: 20px; height: 20px;"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="remember">
+                                        <label class="form-check-label" for="remember">Remember me</label>
+                                    </div>
+                                    <a href="/forgot-password.html" class="text-decoration-none">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg w-100 mb-3" id="login-btn">
+                                    <span class="btn-text">Sign in</span>
+                                    <span class="spinner-border spinner-border-sm me-2 d-none" role="status"></span>
+                                </button>
+
+                                <div class="text-center">
+                                    <span class="text-muted">Don't have an account? </span>
+                                    <a href="/register.html" class="text-decoration-none">Sign up</a>
+                                </div>
+                            </form>
+
+                            <div class="mt-4 p-3 bg-light rounded">
+                                <p class="small mb-1"><strong>Demo Credentials:</strong></p>
+                                <p class="small mb-1">Email: admin@meenoe.com</p>
+                                <p class="small mb-0">Password: password</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="/src/assets/js/bootstrap.js"></script>
+    <script type="module" src="/src/js/auth.js"></script>
+    <script type="module" src="/src/js/pages/login.js"></script>
+</body>
+</html>
